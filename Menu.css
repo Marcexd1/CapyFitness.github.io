@@ -1,0 +1,239 @@
+
+
+html, body {
+  height: 100%;
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+}
+
+.SubBarra {
+  width: 1rem;
+  max-width: 1rem;
+  min-width: 18rem;
+  background-color: #333;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 95.20%;
+}
+
+.subtitulo {
+  color: #7d7d7d; /* Gris medio apagado */
+  font-size: 18px;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+
+.menu-button{
+  width: 100%;
+  padding: 15px;
+  margin: 10px 0;
+  background-color: #ffcc00;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  text-align: center;
+  
+}
+
+
+.menu-button:hover {
+  background-color: #eebe00;
+}
+
+.main-content {
+  flex-grow: 0;
+  padding: 15%;
+  background-color: #f4f4f4;
+  overflow-y: auto;
+  
+}
+
+/* Media Queries para Responsividad */
+@media (max-width: 768px) {
+  .SubBarra {
+    width: 25%;
+    max-width: 25%;
+    min-width: 25%;
+  }
+
+  .menu-button {
+    font-size: 14px;
+    padding: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .SubBarra {
+    width: 40%;
+    max-width: 40%;
+    min-width: 40%;
+    padding: 10px;
+  }
+
+  .menu-button {
+    font-size: 12px;
+    padding: 10px;
+    margin: 5px 0;
+  }
+}
+
+@media (max-width: 320px) {
+  .SubBarra {
+    width: 50%;
+    max-width: 50%;
+    min-width: 50%;
+    padding: 5px;
+  }
+
+  .menu-button {
+    font-size: 10px;
+    padding: 8px;
+    margin: 3px 0;
+  }
+}
+/* Estilos para el menú de navegación */
+nav {
+  background-color: #333;
+  padding: 10px;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+
+/* Estilos para el contenido */
+.content {
+  padding: 20px;
+}
+
+h1 {
+  color: #333;
+}
+
+p {
+  color: #666;
+}
+
+/* Todo lo relacionado con el ajuste de Usuarios css */
+/* Estilos generales */
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  height: 100%;
+}
+
+/* Contenedor del ícono de usuario y menú emergente */
+.user-menu-container {
+  position: fixed; /* Fijar el contenedor */
+  top: 0.5rem; /* Separar del borde superior */
+  right: 0.5rem; /* Separar del borde derecho */
+  display: inline-block;
+  z-index: 1000; /* Asegurarse de que esté por encima de otros elementos */
+}
+
+/* Estilo del ícono de usuario */
+.user-icon {
+  font-size: 32px;
+  cursor: pointer;
+  color: rgb(255, 0, 0); /* Color del ícono */
+  margin-right: 0; /* Asegurar que esté alineado a la derecha */
+}
+
+/* Estilos del menú emergente */
+.user-menu {
+  display: none; /* Ocultar el menú por defecto */
+  position: absolute; /* Posicionar relativo al ícono */
+  right: 0; /* Alinear a la derecha del ícono */
+  top: 3rem; /* Separar del ícono */
+  background-color: rgb(56, 50, 50);
+  box-shadow: 0px 4px 8px rgba(95, 86, 86, 0.952);
+  border-radius: 1rem;
+  width: 8rem;
+  padding: 1rem;
+}
+
+/* Mostrar el menú cuando esté activo */
+.user-menu.show {
+  display: block;
+}
+
+/* Estilo de los elementos del menú */
+.user-menu ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.user-menu ul li {
+  margin: 0.01rem 0;
+}
+
+/* Estilos para el modal */
+.modal {
+  display: none; /* Ocultar por defecto */
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro semitransparente */
+}
+
+.modal-content {
+  background-color: white;
+  margin: 15% auto;
+  padding: 20px;
+  border-radius: 10px;
+  width: 60%;
+  position: relative;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Botón de cerrar (×) */
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  color: #aaa;
+  font-size: 30px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close-btn:hover {
+  color: #000;
+}
+
+/* Mostrar modal cuando esté activo */
+.modal.show {
+  display: block;
+}
+
+.SBtn {
+  width: 100%;
+  padding: 1rem;
+  margin: 1rem 0;
+  background-color: #1d1d1b;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  text-align: center;
+}

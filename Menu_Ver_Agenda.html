@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menú General</title>
+    <link rel="stylesheet" href="Menu.css">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <script defer src="Menu.js"></script> <!-- Archivo JS para manejar la carga dinámica -->
+</head>
+<body>
+
+<!-- SubBarra de accesos directos -->
+<div class="SubBarra">
+    <h2 class="subtitulo">Accesos directos</h2>
+    <!-- Formularios para cada botón -->
+    <form method="POST" action="ERF.php">
+        <button class="menu-button" type="submit" name="page" value="ver_membresias">Ver Membrecías</button>
+        <button class="menu-button" type="submit" name="page" value="ver_clientes">Ver Clientes</button>
+        <button class="menu-button" type="submit" name="page" value="ver_agenda">Ver Agenda</button>
+        <button class="menu-button" type="submit" name="page" value="ver_horario_dia">Ver Horario del Día</button>
+    </form>
+
+    <h2 class="subtitulo">Funciones</h2>
+    <form method="POST" action="ERF.php">
+        <button class="menu-button" type="submit" name="page" value="agregar_clases">Agregar Clases</button>
+        <button class="menu-button" type="submit" name="page" value="modificar_clases">Modificar Clases</button>
+        <button class="menu-button" type="submit" name="page" value="agregar_clientes">Agregar Clientes</button>
+        <button class="menu-button" type="submit" name="page" value="actualizar_estados">Actualizar Estados</button>
+    </form>
+</div>
+
+<div class="main-content">
+    <Label>No se implemento</Label>
+</div>
+
+<!-- Menú de usuario -->
+<form method="POST" action="ERF.php">
+    <div class="user-menu-container">
+        <i class='bx bxs-user-circle user-icon' id="userIcon"></i>
+        <!-- Menú emergente -->
+        <div class="user-menu" id="userMenu">
+            <ul>
+                <button class="SBtn" type="submit" name="page" value="perfil">Perfil</button>
+                <button class="SBtn" type="submit" name="page" value="configuracion">Configuración</button>
+                <li><a href="logout.php">Cerrar Sesión</a></li>
+            </ul>
+        </div>
+    </div>
+</form>
+
+</body>
+</html>
